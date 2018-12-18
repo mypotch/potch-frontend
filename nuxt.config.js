@@ -24,7 +24,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [],
+  css: ['@/assets/stylesheets/application.scss'],
 
   /*
   ** Plugins to load before mounting the App
@@ -49,6 +49,9 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    styleResources: {
+      scss: 'assets/stylesheets/mixins/*.scss'
+    },
     /*
     ** You can extend webpack config here
     */
