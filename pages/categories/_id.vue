@@ -12,7 +12,13 @@
       <li
         v-for="post in postsData.items"
         :key="post.pid">
-        <nuxt-link :to="`/categories/${$route.params.id}/posts/${post.pid}`">{{ post.title }}</nuxt-link>
+        <nuxt-link :to="`/categories/${$route.params.id}/posts/${post.pid}`">
+          <img
+            :src="post.icon_link"
+            class="icon" >
+          <span class="title">{{ post.title }}</span>
+        </nuxt-link>
+        <p class="desc">{{ post.desc }}</p>
       </li>
     </ul>
   </div>
@@ -47,6 +53,18 @@ export default {
   li {
     background: #f5f5f5;
     padding: 6px;
+    line-height: 24px;
+
+    .icon {
+      border-radius: 20px;
+      width: 24px;
+      height: 24px;
+      font-size: 0;
+      vertical-align: top;
+    }
+    .title {
+      font-size: 16px;
+    }
   }
 }
 </style>

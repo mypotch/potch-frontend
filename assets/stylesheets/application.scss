@@ -16,3 +16,6 @@
 .clearfix:after {clear: both;}
 .clearfix {clear: both;zoom: 1;}
 /* 浮动结束 */
+.desc {
+  color: map_get($theme, desc);
+}
