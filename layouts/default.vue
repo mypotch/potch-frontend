@@ -22,7 +22,7 @@ export default {
   min-height: 100vh;
   padding: 10px 25px;
   background: #fff;
-  width: 80%;
+  width: 82%;
   @include mobile-device {
     width: 100%;
   }

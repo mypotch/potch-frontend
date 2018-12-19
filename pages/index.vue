@@ -1,5 +1,14 @@
 <template>
   <section>
-    hello world
+    <nomal-tool/>
   </section>
 </template>
+
+<script>
+import NomalTool from '@/components/NomalTool.vue'
+export default {
+  components: {
+    NomalTool
+  }
+}
+</script>
