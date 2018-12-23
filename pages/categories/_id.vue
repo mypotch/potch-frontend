@@ -1,13 +1,17 @@
 <template>
   <div>
-    <span class="fl">分类：</span>
-    <ul class="category-list">
-      <li
-        v-for="subCategory in categoryData.item.children"
-        :key="subCategory.id">
-        <nuxt-link :to="`/categories/${subCategory.id}`">{{ subCategory.name }}</nuxt-link>
-      </li>
-    </ul>
+    <category-with-parents
+      v-if="postsData"
+      :full-paths="postsData.category_with_parents"/>
+    <div class="category-list">
+      <ul>
+        <li
+          v-for="subCategory in categoryData.item.children"
+          :key="subCategory.id">
+          <nuxt-link :to="`/categories/${subCategory.id}`">{{ subCategory.name }}</nuxt-link>
+        </li>
+      </ul>
+    </div>
     <ul class="post-list">
       <li
         v-for="post in postsData.items"
@@ -25,25 +29,30 @@
 </template>
 
 <script>
+import CategoryWithParents from '@/components/single/CategoryWithParents'
 export default {
   async asyncData({ app, params }) {
     let categoryResult = await app.$axios.get(`v1/categories/${params.id}`)
     let postsResult = await app.$axios.get(`v1/categories/${params.id}/posts`)
     return { categoryData: categoryResult.data, postsData: postsResult.data }
+  },
+  components: {
+    CategoryWithParents
   }
 }
 </script>
 
 <style lang="scss" scoped>
 .category-list {
-  margin-bottom: 10px;
-  overflow: hidden;
   li {
-    display: inline;
-    &:not(:last-child):after {
-      color: #f2f2f2;
-      content: '|';
-      padding: 0 5px;
+    display: inline-block;
+    a {
+      display: inline-block;
+      line-height: 80px;
+      margin: 5px 15px 15px;
+      padding: 5px 30px;
+      background: #eee;
+      border-radius: 5px;
     }
   }
 }

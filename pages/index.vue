@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import NomalTool from '@/components/NomalTool.vue'
+import NomalTool from '@/components/single/NomalTool.vue'
 export default {
   components: {
     NomalTool
