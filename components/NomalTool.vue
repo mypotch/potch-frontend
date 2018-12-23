@@ -17,9 +17,7 @@ export default {
       orderCode: ''
     }
   },
-  created() {
-    console.log(111, this.$axios)
-  }
+  created() {}
 }
 </script>
 
