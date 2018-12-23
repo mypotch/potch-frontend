@@ -27,10 +27,8 @@
 <script>
 export default {
   async asyncData({ app, params }) {
-    let categoryResult = await app.$axios.get(`api/v1/categories/${params.id}`)
-    let postsResult = await app.$axios.get(
-      `api/v1/categories/${params.id}/posts`
-    )
+    let categoryResult = await app.$axios.get(`v1/categories/${params.id}`)
+    let postsResult = await app.$axios.get(`v1/categories/${params.id}/posts`)
     return { categoryData: categoryResult.data, postsData: postsResult.data }
   }
 }

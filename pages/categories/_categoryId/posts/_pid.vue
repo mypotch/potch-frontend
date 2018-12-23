@@ -13,10 +13,10 @@
 export default {
   async asyncData({ app, params }) {
     let categoryResult = await app.$axios.get(
-      `api/v1/categories/${params.categoryId}`
+      `v1/categories/${params.categoryId}`
     )
     let postResult = await app.$axios.get(
-      `api/v1/categories/${params.categoryId}/posts/${params.pid}`
+      `v1/categories/${params.categoryId}/posts/${params.pid}`
     )
     return { category: categoryResult.data.item, post: postResult.data.item }
   }

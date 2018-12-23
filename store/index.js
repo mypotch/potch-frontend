@@ -16,7 +16,7 @@ export default function() {
     },
     actions: {
       async nuxtServerInit({ commit }, { req, app }) {
-        const { data } = await app.$axios.get('api/v1/home')
+        const { data } = await app.$axios.get('v1/home')
         commit('SetHomeData', data)
       }
     },
