@@ -21,7 +21,6 @@ export default {
   margin: 0 auto;
   min-height: 100vh;
   padding: 10px 25px;
-  background: #fff;
   width: 82%;
   @include mobile-device {
     width: 100%;

@@ -1,5 +1,6 @@
 @import "reset";
 @import "animations";
+@import "mixins/components/button";
 /* 浮动开始 */
 .fl, .pull-left{
   float: left;
@@ -16,6 +17,12 @@
 .clearfix:after {clear: both;}
 .clearfix {clear: both;zoom: 1;}
 /* 浮动结束 */
+.page-bg {
+  background: #fff;
+}
 .desc {
   color: map_get($theme, desc);
+}
+.button {
+
 }
