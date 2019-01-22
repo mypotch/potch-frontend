@@ -1,4 +1,5 @@
 const pkg = require('./package')
+console.log(process.env)
 module.exports = {
   mode: 'universal',
   env: {},
