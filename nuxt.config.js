@@ -1,5 +1,4 @@
 const pkg = require('./package')
-
 module.exports = {
   mode: 'universal',
   env: {},
@@ -43,7 +42,7 @@ module.exports = {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
-    baseURL: process.env.__ENV === 'production' ? 'http://apipt.zezeping.com' : 'http://api.local.com:3000'
+    baseURL: process.env.NUXT_ENV_BASE_URL || 'http://api.local.com:3000'
   },
   /*
   ** Build configuration

@@ -49,16 +49,16 @@ export default {
     a {
       display: inline-block;
       line-height: 80px;
-      margin: 5px 15px 15px;
+      margin: 5px 15px 15px 0;
       padding: 5px 30px;
-      background: #eee;
+      background: #fafafa;
       border-radius: 5px;
     }
   }
 }
 .post-list {
   li {
-    background: #f5f5f5;
+    background: #fcfcf9;
     padding: 6px;
     line-height: 24px;
 

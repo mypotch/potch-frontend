@@ -1,5 +1,5 @@
 <template>
-  <div class="post">
+  <div class="post page-bg">
     <h2>{{ post.title }}</h2>
     <div class="sub-info">
       <span>{{ post.created_time }}</span> |
