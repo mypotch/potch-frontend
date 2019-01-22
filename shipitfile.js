@@ -33,8 +33,10 @@ module.exports = shipit => {
   // 监听部署事件，在部署中不同生命周期中插入任务 shipit production deploy
   shipit.on('deploy', function () {
     shipit.on('published', async function () {
-      await shipit.remote('npm install --production && npm run build', { cwd: `${shipit.config.deployTo}/current`})
+      console.log('======= - doing... after published =======')
+      await shipit.remote('cnpm install && cnpm run build', { cwd: `${shipit.config.deployTo}/current`})
       // await shipit.start('pm2:start');
+      console.log('======= - finish after published =======')
     })
   })
 
