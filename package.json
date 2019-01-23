@@ -1,7 +1,7 @@
 {
   "name": "potch-frontend",
   "version": "1.0.0",
-  "description": "仄仄平，信息收集展示平台",
+  "description": "拥有一部手机就能赚取零花钱。",
   "author": "五月的风",
   "private": true,
   "scripts": {

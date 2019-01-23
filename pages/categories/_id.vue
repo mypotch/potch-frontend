@@ -46,6 +46,7 @@ export default {
 .category-list {
   li {
     display: inline-block;
+    border-bottom: 1px solid #f2f2f2;
     a {
       display: inline-block;
       line-height: 80px;
