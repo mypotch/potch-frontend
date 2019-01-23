@@ -1,7 +1,7 @@
 {
   "name": "potch-frontend",
   "script": "server/index.js",
-  "cwd"   : "/mnt/www/zezeping/potch/potch-frontend/current",
+  "cwd"   : "./",
   "log_date_format": "YYYY-MM-DD HH:mm Z",
   "instances": 1,
   "max_memory_restart": "200M",
