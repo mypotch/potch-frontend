@@ -4,6 +4,7 @@
     <div class="sub-info">
       <span>{{ post.created_time }}</span> |
       <span>分类：<nuxt-link :to="`/categories/${category.id}`">{{ category.name }}</nuxt-link></span>
+      <span class="fr">浏览量：{{ post.counter.views_count }}</span>
     </div>
     <div v-html="post.content"/>
   </div>
