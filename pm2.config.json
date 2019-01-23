@@ -1,0 +1,24 @@
+{
+  "name": "potch-frontend",
+  "script": "server/index.js",
+  "cwd"   : "/mnt/www/zezeping/potch/potch-frontend/current",
+  "log_date_format": "YYYY-MM-DD HH:mm Z",
+  "instances": 1,
+  "max_memory_restart": "200M",
+  "merge_logs": true,
+  "exec_mode": "cluster",
+  "kill_timeout" : 5000,
+  "ignore_watch": ["node_modules", "logs", "public"],
+  "watch_options": {
+    "followSymlinks": false
+  },
+  "error_file" : "./logs/pm2-err.log",
+  "out_file"   : "./logs/pm2-out.log",
+  "env": {
+    "NODE_ENV": "production",
+    "API_HOST": "http://apipt.zezeping.com"
+  },
+  "args": [
+    "--color"
+  ]
+}

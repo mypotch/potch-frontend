@@ -12,9 +12,7 @@ module.exports = shipit => {
       shared: {
         overwrite: true,
         dirs: ['logs', 'node_modules'],
-        files: [
-          'pm2.config.json'
-        ],
+        files: [] //['pm2.config.json'],
       }
     },
     staging: {
