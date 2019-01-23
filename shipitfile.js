@@ -13,8 +13,7 @@ module.exports = shipit => {
         overwrite: true,
         dirs: ['logs', 'node_modules'],
         files: [
-          'pm2.config.json',
-          'nuxt.vars.js'
+          'pm2.config.json'
         ],
       }
     },

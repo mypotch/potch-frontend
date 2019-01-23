@@ -1,5 +1,4 @@
 const pkg = require('./package')
-const nuxtVars = require('./nuxt.vars')
 module.exports = {
   mode: 'universal',
   env: {},
@@ -43,7 +42,7 @@ module.exports = {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
-    baseURL: nuxtVars.API_HOST
+    baseURL: process.env.API_HOST || 'http://api.local.com:3000'
   },
   /*
   ** Build configuration
