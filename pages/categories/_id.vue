@@ -46,7 +46,6 @@ export default {
 .category-list {
   li {
     display: inline-block;
-    border-bottom: 1px solid #f2f2f2;
     a {
       display: inline-block;
       line-height: 80px;
@@ -62,6 +61,7 @@ export default {
     background: #fcfcf9;
     padding: 6px;
     line-height: 24px;
+    border-bottom: 1px solid #f2f2f2;
 
     .icon {
       border-radius: 20px;
