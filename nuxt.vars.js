@@ -8,5 +8,6 @@ const envVars = {
 }
 
 module.exports = function(nodeEnv) {
+  nodeEnv = nodeEnv || 'development'
   return Object.assign({}, envVars[nodeEnv])
 }
