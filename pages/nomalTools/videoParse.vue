@@ -43,10 +43,11 @@ export default {
   methods: {
     parse() {
       this.urls = [
-        `http:\\/\\/api.taovb.com\\/?url=`,
-        `http:\\/\\/jqaaa.com\\/jx.php?url=`,
+        `http://www.zhmdy.top/index.php?zhm_jx=`
+        // `http:\\/\\/api.taovb.com\\/?url=`,
+        // `http:\\/\\/jqaaa.com\\/jx.php?url=`,
         // `http:\\/\\/www.jingxinsy.cn\\/jx\\/?url=`,
-        `http:\\/\\/api.agzb.vip\\/?url=`
+        // `http:\\/\\/api.agzb.vip\\/?url=`
       ].map(item => {
         return `${item}${this.inputUrl}`
       })
